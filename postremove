@@ -1,0 +1,16 @@
+PATH=/usr/bin:/usr/sbin:${PATH}
+export PATH
+
+DRV=apc
+
+if [ "${BASEDIR}" = "/" ]; then
+    REM_DRV="rem_drv"
+else
+    REM_DRV="rem_drv -b ${BASEDIR}"
+fi
+
+${REM_DRV} ${DRV}
+if [ $? -ne 0 ]; then
+    echo "\nFailed rem_drv!\n" >&2
+    exit 1
+fi

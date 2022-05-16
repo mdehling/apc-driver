@@ -1,0 +1,9 @@
+PKG=MDXapc
+NAME=Aurora Personality Chip (APC) driver
+VERSION=Version 0.1
+VENDOR=Malte Dehling
+EMAIL=mdehling@gmail.com
+CLASSES=none
+CATEGORY=system
+ARCH=sparc
+BASEDIR=/

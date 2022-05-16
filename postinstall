@@ -1,0 +1,17 @@
+PATH=/usr/bin:/usr/sbin:${PATH}
+export PATH
+
+DRV=apc
+DRV_ALIAS=power-management
+
+if [ "${BASEDIR}" = "/" ]; then
+    ADD_DRV="add_drv -i ${DRV_ALIAS}"
+else
+    ADD_DRV="add_drv -b ${BASEDIR} -i ${DRV_ALIAS}"
+fi
+
+${ADD_DRV} ${DRV}
+if [ $? -ne 0 ]; then
+    echo "\nFailed add_drv!\n" >&2
+    exit 1
+fi
