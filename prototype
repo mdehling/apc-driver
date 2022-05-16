@@ -1,10 +1,10 @@
 i pkginfo
 i copyright=LICENSE
 i postinstall
-i postremove
+i preremove
 !default 0755 root sys
-d none /platform ? ? ?
-d none /platform/sun4m ? ? ?
-d none /platform/sun4m/kernel ? ? ?
-d none /platform/sun4m/kernel/drv ? ? ?
-f none /platform/sun4m/kernel/drv/apc=apc
+d none platform ? ? ?
+d none platform/sun4m ? ? ?
+d none platform/sun4m/kernel ? ? ?
+d none platform/sun4m/kernel/drv ? ? ?
+f none platform/sun4m/kernel/drv/apc=apc

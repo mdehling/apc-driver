@@ -21,7 +21,7 @@ apc: apc.c
 	$(LD) $(LDFLAGS) -o apc apc.o
 
 
-$(PKGFILE): apc pkginfo prototype LICENSE postinstall postremove
+$(PKGFILE): apc pkginfo prototype LICENSE postinstall preremove
 	$(PKGMK) -o -d .
 	$(PKGTRANS) -s . $(PKGFILE) $(PKG)
 
