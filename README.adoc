@@ -23,6 +23,9 @@ run the installation script as root.  After installation, the driver is loaded
 automatically (no need to reboot) and you should see your host CPU usage drop
 quickly.
 
+The driver is currently _not_ automatically loaded at boot time.  To do so, add
+`forceload: drv/apc` to your `/etc/system` file.
+
 image:install.png["Installation Process"]
 
 To uninstall the driver, simply remove the package using `pkgrm MDXapc` and
