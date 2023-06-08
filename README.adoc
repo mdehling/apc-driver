@@ -1,22 +1,19 @@
-= Aurora Personality Chip (APC) Driver for Solaris 7
+= Aurora Personality Chip (APC) Driver for Solaris 7/8
 Malte Dehling <mdehling@gmail.com>
 
 :imagesdir: https://raw.githubusercontent.com/mdehling/apc-driver/main/
 
 
-This repository contains a Solaris 7 driver for the Aurora Personality Chip
+This repository contains a Solaris 7/8 driver for the Aurora Personality Chip
 (APC).  The `qemu-system-sparc` emulator provides an APC implementation for
 SPARCstation 4/5 machines and installing this driver dramatically reduces host
-CPU usage by letting the host cpu sleep when the Solaris 7 guest is idle
+CPU usage by letting the host cpu sleep when the Solaris 7/8 guest is idle
 instead of sending it into a busy loop.
-
-WARNING:  This driver is currently *untested* on real hardware.  It is intended
-to be installed in QEMU only.
 
 
 Driver Installation
 -------------------
-To install the APC driver, simply download the Solaris 7 package
+To install the APC driver, simply download the Solaris 7/8 package
 link:MDXapc-v0.1-sparc.pkg[] and run `pkgadd -d MDXapc-v0.1-sparc.pkg`.  This
 should show you the license (3-clause BSD) and warn you that you are about to
 run the installation script as root.  After installation, the driver is loaded
@@ -41,4 +38,6 @@ appropriate warnings here.
 
 References
 ----------
-- http://cvsweb.netbsd.org/bsdweb.cgi/src/sys/arch/sparc/dev/apc.c[NetBSD APC driver]
+:cvsweb-netbsd:	http://cvsweb.netbsd.org/bsdweb.cgi
+:netbsd-apc:	/src/sys/arch/sparc/dev/apc.c
+- link:{cvsweb-netbsd}{netbsd-apc}[NetBSD APC driver]

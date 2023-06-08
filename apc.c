@@ -1,5 +1,5 @@
 /*
- * apc.c - APC (Aurora Personality Chip) driver for Sun Solaris 7.
+ * apc.c - APC (Aurora Personality Chip) driver for Sun Solaris 7/8.
  *
  * Copyright (C) 2022 Malte Dehling.
  *
